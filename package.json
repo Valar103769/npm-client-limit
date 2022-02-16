@@ -1,6 +1,6 @@
 {
   "name": "npm-client-limit",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "安装依赖时，强制约束只能使用指定的包管理器",
   "main": "bin.js",
   "bin": "bin.js",

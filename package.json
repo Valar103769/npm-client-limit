@@ -1,0 +1,23 @@
+{
+  "name": "npm-client-limit",
+  "version": "1.0.1",
+  "description": "安装依赖时，强制约束只能使用指定的包管理器",
+  "main": "bin.js",
+  "bin": "bin.js",
+  "keywords": [
+    "npm",
+    "yarn",
+    "pnpm",
+    "npm-client"
+  ],
+  "author": "Valar103769",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Valar103769/npm-client-limit.git"
+  },
+  "homepage": "https://github.com/Valar103769/npm-client-limit",
+  "dependencies": {
+    "chalk": "^4.1.2"
+  }
+}

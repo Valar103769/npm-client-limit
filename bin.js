@@ -1,0 +1,26 @@
+#!/usr/bin/env node
+ const chalk  = require('chalk')
+
+const log = console.log
+const argv = process.argv.slice(2)
+
+if(argv.length === 0){
+  console.log('请指定你想要使用的包管理器，npm-client-limit <npm|pnpm|yarn>')
+  process.exit(1)
+}
+console.log('argv',argv)
+const wantedNpmClient = argv[0]
+const useWantedNpmClient = (wantedNpmClient) => {
+  console.log('aaaaa',process.env.npm_execpath,process.env.npm_config_user_agent)
+  return (
+   (process.env.npm_execpath && process.env.npm_execpath.includes(wantedNpmClient)) ||
+   (process.env.npm_config_user_agent &&
+    process.env.npm_config_user_agent.includes(wantedNpmClient))
+  )
+ }
+
+if(!useWantedNpmClient(wantedNpmClient)){
+  log(chalk.red('此项目只能使用 ' + wantedNpmClient + " 包管理器," + '安装依赖请执行 ' + wantedNpmClient + ' install'))
+  process.exit(1)
+ }
+ 

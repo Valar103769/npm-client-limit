@@ -8,12 +8,9 @@
 `package.json` 中添加
 ```json
   "scripts": {
-    "prepare": "npx npm-client-limit pnpm"
+    "preinstall": "npx npm-client-limit pnpm",
   }
 ```
-
-[prepare: 在两种情况前运行，一是npm publish命令前，二是不带参数的npm install命令](https://segmentfault.com/a/1190000008832423)
-
- 如果你的项目需要使用 `npm publish`, 那么请不要使用该库
+缺点: 仅支持不带参数的install命令, 例如  `npm install` 
 
 

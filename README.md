@@ -5,7 +5,7 @@
 ## Usage
 例如，强制指定使用 `pnpm`
 
-`package.json` 中添加
+无需预先安装，只需在 `package.json` 中添加如下配置, 
 ```json
   "scripts": {
     "preinstall": "npx npm-client-limit pnpm",
@@ -15,5 +15,3 @@
 `npm install` 安装所有依赖时, 可被限制
 
 缺点：安装某个依赖时，无法限制，例如 `npm install react`
-
-

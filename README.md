@@ -11,6 +11,9 @@
     "preinstall": "npx npm-client-limit pnpm",
   }
 ```
-缺点: 只能限制安装所有依赖时, 例如  `npm install` ，安装某个依赖还是无法限制，例如 `npm install react`
+
+`npm install` 安装所有依赖时, 可被限制
+
+缺点：安装某个依赖时，无法限制，例如 `npm install react`
 
 
